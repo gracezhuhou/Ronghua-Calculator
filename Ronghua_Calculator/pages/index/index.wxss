@@ -1,4 +1,17 @@
 /**index.wxss**/
+.allCalculator {
+  display: flex;
+  flex-direction: row;
+}
+
+.calNav {
+  width: 150rpx;
+}
+
+.calPic {
+  width: 150rpx;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
