@@ -1,8 +1,14 @@
 <!--index.wxml-->
-<view class="container" >
-  <view class="allCalculator">
+<view class="container">
+  <view class="row">
     <navigator class="calNav" url='/pages/basic/basic'>
       <cover-image class="calPic" src='/pic/BasicCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
     </navigator>
     <navigator class="calNav" url='/pages/mortgage/mortgage'>
       <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>

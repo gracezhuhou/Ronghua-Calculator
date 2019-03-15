@@ -1,11 +1,7 @@
 /**index.wxss**/
-.allCalculator {
-  display: flex;
-  flex-direction: row;
-}
-
 .calNav {
   width: 150rpx;
+  margin: 10rpx;
 }
 
 .calPic {

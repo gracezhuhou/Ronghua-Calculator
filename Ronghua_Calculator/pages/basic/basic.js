@@ -5,8 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    formular: "",
   },
+
+  bindTap_clear: function() {
+    this.setData({
+      formular: "",
+      result: ""
+    })
+  },
+
+  bindTap_seven: function() {
+    this.setData({
+      formular: this.data.formular + 7
+    })
+  },
+
+  bindTap_eight: function () {
+    this.setData({
+      formular: this.data.formular + 8
+    })
+  },
+
+  bindTap_minus: function () {
+    this.setData({
+      formular: this.data.formular + "-"
+    })
+  },
+
+  bindTap_equal: function () {
+    this.setData({
+      result: 0
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
