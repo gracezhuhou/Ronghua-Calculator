@@ -15,6 +15,21 @@
     </navigator>
   </view>
 
+  <view class="row">
+    <navigator class="calNav" url='/pages/card/card'>
+      <cover-image class="calPic" src='/pic/Card.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/24points/24points'>
+      <cover-image class="calPic" src='/pic/Card24.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    </navigator>
+  </view>
+
 
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

@@ -1,0 +1,17 @@
+/* pages/24points/24points.wxss */
+
+.numInput {
+  width: 200rpx;
+  height: 80rpx;
+  margin: 30rpx 40rpx;
+  /* border-style: solid; */
+  border-radius: 30rpx;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+.calButton {
+  width: 400rpx;
+  height: 80rpx;
+  margin: 30rpx auto;
+}

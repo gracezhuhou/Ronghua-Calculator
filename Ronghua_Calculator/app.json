@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/basic/basic",
-    "pages/mortgage/mortgage"
+    "pages/mortgage/mortgage",
+    "pages/24points/24points",
+    "pages/card/card"
   ],
   "window": {
     "backgroundTextStyle": "light",

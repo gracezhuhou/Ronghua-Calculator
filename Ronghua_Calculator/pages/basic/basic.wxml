@@ -9,38 +9,67 @@
     <swiper-item>
       <view class="row">
         <button class="calButton" bindtap="bindTap_clear">C</button>
-        <button class="calButton" bindtap="bindTap_bracket">()</button>
-        <button class="calButton">%</button>
-        <button class="calButton">÷</button>
+        <button class="calButton" bindtap="bindTap_delete">Del</button>
+        <button class="calButton" bindtap="bindTap_percent">%</button>
+        <button class="calButton" bindtap="bindTap_divide">÷</button>
       </view>
       <view class="row">
         <button class="calButton" bindtap="bindTap_seven">7</button>
         <button class="calButton" bindtap="bindTap_eight">8</button>
-        <button class="calButton">9</button>
-        <button class="calButton">×</button>
+        <button class="calButton" bindtap="bindTap_nine">9</button>
+        <button class="calButton" bindtap="bindTap_multiply">×</button>
       </view>
       <view class="row">
-        <button class="calButton">4</button>
-        <button class="calButton">5</button>
-        <button class="calButton">6</button>
+        <button class="calButton" bindtap="bindTap_four">4</button>
+        <button class="calButton" bindtap="bindTap_five">5</button>
+        <button class="calButton" bindtap="bindTap_six">6</button>
         <button class="calButton" bindtap="bindTap_minus">-</button>
       </view>
       <view class="row">
-        <button class="calButton">1</button>
-        <button class="calButton">2</button>
-        <button class="calButton">3</button>
-        <button class="calButton">+</button>
+        <button class="calButton" bindtap="bindTap_one">1</button>
+        <button class="calButton" bindtap="bindTap_two">2</button>
+        <button class="calButton" bindtap="bindTap_three">3</button>
+        <button class="calButton" bindtap="bindTap_add">+</button>
       </view>
       <view class="row">
-        <button class="calButton">0</button>
-        <button class="calButton">.</button>
-        <button class="calButton">+/-</button>
+        <button class="calButton" bindtap="bindTap_zero">0</button>
+        <button class="calButton" bindtap="bindTap_point">.</button>
+        <button class="calButton" bindtap="bindTap_Ans">Ans</button>
         <button class="calButton" bindtap="bindTap_equal">=</button>
       </view>
     </swiper-item>
 
     <swiper-item>
-      <view>?</view>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_sin">sin</button>
+        <button class="calButton" bindtap="bindTap_cos">cos</button>
+        <button class="calButton" bindtap="bindTap_tan">tan</button>
+        <button class="calButton" bindtap="bindTap_cot">cot</button>
+      </view>
+      <view class="row">
+        <button class="calButton">!</button>
+        <button class="calButton">√</button>
+        <button class="calButton">x²</button>
+        <button class="calButton">e</button>
+      </view>
+      <view class="row">
+        <button class="calButton">nPr</button>
+        <button class="calButton">nCr</button>
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+      </view>
+      <view class="row">
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+      </view>
+      <view class="row">
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+        <button class="calButton">1</button>
+        <button class="calButton" bindtap="bindTap_equal">=</button>
+      </view>
     </swiper-item>
   </swiper>
 
