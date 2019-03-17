@@ -12,10 +12,15 @@ Page({
 
   bindsubmit: function(e) {
     getFormular(e.detail.value);
-    this.setData({outputFormular: formular})
+    this.setData({ outputFormular: formular })
   },
 
-  // 给用户四个随机数用于计算24点
+  // 清空
+  bindReset: function () {
+    this.setData({ outputFormular: "" })
+  },
+
+  // 给用户四个随机数（1-10）用于计算24点
   inputRandomNum: function() {
     this.setData({
       inputValue1: getRandomNum(1, 10),
@@ -24,9 +29,7 @@ Page({
       inputValue4: getRandomNum(1, 10)
     })
   },
-
   
-
   /**
    * 生命周期函数--监听页面加载
    */

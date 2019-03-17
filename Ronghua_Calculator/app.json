@@ -5,7 +5,9 @@
     "pages/basic/basic",
     "pages/mortgage/mortgage",
     "pages/24points/24points",
-    "pages/card/card"
+    "pages/card/card",
+    "pages/random/random",
+    "pages/statistic/statistic"
   ],
   "window": {
     "backgroundTextStyle": "light",

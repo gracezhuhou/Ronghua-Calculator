@@ -10,8 +10,8 @@
     <navigator class="calNav" url='/pages/mortgage/mortgage'>
       <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
     </navigator>
-    <navigator class="calNav" url='/pages/mortgage/mortgage'>
-      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    <navigator class="calNav" url='/pages/statistic/statistic'>
+      <cover-image class="calPic" src='/pic/Statistic.png'></cover-image>
     </navigator>
   </view>
 
@@ -22,8 +22,8 @@
     <navigator class="calNav" url='/pages/24points/24points'>
       <cover-image class="calPic" src='/pic/Card24.png'></cover-image>
     </navigator>
-    <navigator class="calNav" url='/pages/mortgage/mortgage'>
-      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    <navigator class="calNav" url='/pages/random/random'>
+      <cover-image class="calPic" src='/pic/Random.png'></cover-image>
     </navigator>
     <navigator class="calNav" url='/pages/mortgage/mortgage'>
       <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>

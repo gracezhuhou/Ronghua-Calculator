@@ -1,0 +1,39 @@
+/* pages/statistic/statistic.wxss */
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+  height: 800rpx;
+  margin: 10rpx;
+}
+
+.numIndex {
+  width: 80rpx;
+  height: 50rpx;
+  text-align: right;
+}
+
+.numInput {
+  width: 250rpx;
+  height: 50rpx;
+  margin: 5rpx;
+  background-color: aliceblue;
+  border-radius: 20rpx;
+  border-style: solid;
+  border-color: gainsboro;
+  text-align: center;
+}
+
+.resultName {
+  width: 150rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  text-align: right;
+}
+
+.resultNum {
+  width: 120rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  text-align: right;
+}

@@ -12,7 +12,7 @@
     </view>
     <button class="calButton" form-type="submit">计算</button>
     <button class="calButton" bindtap="inputRandomNum">随机</button>
-    <button class="calButton" form-type="reset">清空</button>
+    <button class="calButton" form-type="reset" bindtap="bindReset">清空</button>
   </form>
 
   <!-- 输出24点公式 -->

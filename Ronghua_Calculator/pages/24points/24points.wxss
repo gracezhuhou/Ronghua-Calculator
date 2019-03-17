@@ -1,5 +1,4 @@
 /* pages/24points/24points.wxss */
-
 .numInput {
   width: 200rpx;
   height: 80rpx;
