@@ -1,1 +1,41 @@
 /* pages/card/card.wxss */
+.row {
+  margin: 10rpx;
+}
+
+.cardType {
+  width: 50rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: silver;
+  border-radius: 10rpx;
+}
+
+.jokerPic {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx auto;
+}
+
+.buttonLess {
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.cardNum {
+  width: 70rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.buttonMore {
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}

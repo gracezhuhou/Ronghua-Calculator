@@ -1,2 +1,22 @@
 <!--pages/card/card.wxml-->
-<text>pages/card/card.wxml</text>
+<view class="container">
+  <text>扑克牌计算器</text>
+  <view class="row">
+    <view class="column">
+      <view class="row" wx:for="{{cardArray}}" wx:key="{{index}}">
+        <text class="cardType">{{item.type}}</text>
+        <button class="buttonLess" bindtap="bindLess{{index}}">-</button>
+        <text class="cardNum">{{item.num}}</text>
+        <button class="buttonMore" bindtap="bindMore{{index}}">+</button>
+      </view>
+      <view class="row">
+        <view class="cardType">
+          <image class="jokerPic" src='/pic/joker.png'></image>
+        </view>
+        <button class="buttonLess" bindtap="bindLessJk">-</button>
+        <text class="cardNum">{{jkNum}}</text>
+        <button class="buttonMore" bindtap="bindMoreJk">+</button>
+      </view>
+    </view>
+  </view>
+</view>

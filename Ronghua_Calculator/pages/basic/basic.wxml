@@ -1,5 +1,6 @@
 <!--pages/basic/basic.wxml-->
 <view class="container">
+  <!-- <text>基础计算器</text> -->
   <scroll-view scroll-y="true">
     <text class="formularText">{{formular}}</text>
   </scroll-view>

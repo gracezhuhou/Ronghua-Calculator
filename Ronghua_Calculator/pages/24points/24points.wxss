@@ -1,4 +1,8 @@
 /* pages/24points/24points.wxss */
+form {
+  margin: 100rpx 0 20rpx 0;
+}
+
 .numInput {
   width: 200rpx;
   height: 80rpx;
@@ -13,4 +17,5 @@
   width: 400rpx;
   height: 80rpx;
   margin: 30rpx auto;
+  line-height: 80rpx;
 }

@@ -26,7 +26,8 @@ Page({
       inputValue1: getRandomNum(1, 10),
       inputValue2: getRandomNum(1, 10),
       inputValue3: getRandomNum(1, 10),
-      inputValue4: getRandomNum(1, 10)
+      inputValue4: getRandomNum(1, 10),
+      outputFormular: ""
     })
   },
   

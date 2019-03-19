@@ -1,25 +1,11 @@
-// pages/card/card.js
+// pages/function/function.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cardArray: [
-      { type: "A", num: 0 },
-      { type: "2", num: 0 },
-      { type: "3", num: 0 },
-      { type: "4", num: 0 },
-      { type: "5", num: 0 },
-      { type: "6", num: 0 },
-      { type: "7", num: 0 },
-      { type: "8", num: 0 },
-      { type: "9", num: 0 },
-      { type: "10", num: 0 },
-      { type: "J", num: 0 },
-      { type: "Q", num: 0 },
-      { type: "K", num: 0 }],
-    jkNum: 0
+
   },
 
   /**

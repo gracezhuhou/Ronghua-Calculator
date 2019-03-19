@@ -15,6 +15,7 @@ Page({
   },
 
   bindsubmit: function (e) {
+    // 将输入的值赋给array
     var array = new Array();
     for (var i = 0, j = 0; i < 100; ++i) {
       var value = e.detail.value[i];
@@ -23,15 +24,53 @@ Page({
         ++j;
       }
     }
+    // 求和
     var sum = 0, length = array.length;
     for (var i = 0; i < length; ++i) {
       sum = Number(sum) + Number(array[i]);
     }
+    // 排序
+    for (var j = 0; j < length - 1; ++j)
+      for (var i = 0; i < length - j - 1; ++i) {
+        if (array[i] > array[i + 1]) {
+          var temp = array[i];
+          array[i] = array[i + 1];
+          array[i + 1] = temp;
+        }
+      }
     
     var newResult = this.data.result;
-    var average = sum / array.length;
+    // 平均值
+    var average = sum / length;
     newResult[0].num = average;
+    // 中位数
+    var mid = length / 2, median;
+    if (length % 2 == 0)
+      median = (Number(array[mid - 1]) + Number(array[mid])) / 2;
+    else
+      median = array[mid - 0.5];
+    newResult[1].num = median;
+    // 方差
+    var variance = 0;
+    for (var i = 0; i< length; ++i) {
+      variance = Number(variance) + (array[i] - average) * (array[i] - average)
+    }
+    variance = variance / length;
+    var variance2 = variance.toFixed(4);
+    newResult[3].num = variance2;
+    // 标准差
+    var stdDeviation = Math.sqrt(variance);
+    var stdDeviation2 = stdDeviation.toFixed(4);
+    newResult[4].num = stdDeviation2;
 
+    this.setData({ result: newResult })
+  },
+
+  bindReset: function () {
+    var newResult = this.data.result;
+    for (var i = 0; i < newResult.length; ++i) {
+      newResult[i].num = "";
+    }
     this.setData({ result: newResult })
   },
 

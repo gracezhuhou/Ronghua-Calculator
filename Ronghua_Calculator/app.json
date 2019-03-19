@@ -7,12 +7,13 @@
     "pages/24points/24points",
     "pages/card/card",
     "pages/random/random",
-    "pages/statistic/statistic"
+    "pages/statistic/statistic",
+    "pages/function/function"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "融华计算器",
     "navigationBarTextStyle": "black"
   }
 }

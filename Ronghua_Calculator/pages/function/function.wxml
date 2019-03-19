@@ -1,0 +1,5 @@
+<!--pages/function/function.wxml-->
+<view class="container">
+  <text>函数图像计算器</text>
+
+</view>
