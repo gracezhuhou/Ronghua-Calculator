@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/discount/discount",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/basic/basic",
+    "pages/mortgage/mortgage",
+    "pages/cashflow/cashflow",
+    "pages/annuity/annuity"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8d1606",
+    "navigationBarTitleText": "融华",
+    "navigationBarTextStyle": "white"
+  }
+}

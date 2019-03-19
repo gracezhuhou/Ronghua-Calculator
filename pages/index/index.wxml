@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="row">
+    <navigator class="calNav" url='/pages/basic/basic'>
+      <cover-image class="calPic" src='/pic/BasicCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    </navigator>
+  </view>
+  <view class="row">
+    <navigator class="calNav" url='/pages/cashflow/cashflow'>
+      <cover-image class="calPic" src='/pic/FinanceCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+      <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
+    </navigator>
+  </view>
+
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
