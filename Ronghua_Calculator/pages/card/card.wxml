@@ -5,9 +5,9 @@
     <view class="column">
       <view class="row" wx:for="{{cardArray}}" wx:key="{{index}}">
         <text class="cardType">{{item.type}}</text>
-        <button class="buttonLess" bindtap="bindLess{{index}}">-</button>
+        <button class="buttonLess" id="Less{{index}}" bindtap="bindLess">-</button>
         <text class="cardNum">{{item.num}}</text>
-        <button class="buttonMore" bindtap="bindMore{{index}}">+</button>
+        <button class="buttonMore" id="More{{index}}" bindtap="bindMore">+</button>
       </view>
       <view class="row">
         <view class="cardType">

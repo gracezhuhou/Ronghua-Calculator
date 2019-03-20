@@ -9,7 +9,6 @@ Page({
     result: [
       { name: "平均值", num: "" }, 
       { name: "中位数", num: "" },
-      { name: "众数", num: "" },
       { name: "方差", num: "" },
       { name: "标准差", num: "" }]
   },
@@ -57,11 +56,11 @@ Page({
     }
     variance = variance / length;
     var variance2 = variance.toFixed(4);
-    newResult[3].num = variance2;
+    newResult[2].num = variance2;
     // 标准差
     var stdDeviation = Math.sqrt(variance);
     var stdDeviation2 = stdDeviation.toFixed(4);
-    newResult[4].num = stdDeviation2;
+    newResult[3].num = stdDeviation2;
 
     this.setData({ result: newResult })
   },
