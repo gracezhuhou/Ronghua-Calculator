@@ -1,7 +1,52 @@
 <!--pages/statistic/statistic.wxml-->
 <view class="container">
   <text>统计计算器</text>
+
+  <!--计算结果-->
+  <view class="row">
+    <text>x:</text>
+    <view class="column">
+      <view class="row" wx:for="{{result_x}}" wx:key="{{index}}">
+        <text class="resultName">{{item.name}}:</text>
+        <text class="resultNum">{{item.num}}</text>
+      </view>
+    </view>
+    <text>y:</text>
+    <view class="column">
+      <view class="row" wx:for="{{result_y}}" wx:key="{{index}}">
+        <text class="resultName">{{item.name}}:</text>
+        <text class="resultNum">{{item.num}}</text>
+      </view>
+    </view>
+  </view>
+  <text>回归计算：{{formular}}</text>
+  <view class="row">
+    <view class="row" wx:for="{{regression}}" wx:key="{{index}}">
+      <text class="variable">{{item.variable}}=</text>
+      <text class="variableNum">{{item.num}}</text>
+    </view>
+  </view>
+
+
+` <!--数值输入-->
   <form bindsubmit="bindsubmit">
+    <view class="row">
+    <text>x:</text>
+    <input class="numInput" name="input_x"></input>
+    </view>
+    <view class="row">
+    <text>y:</text>
+    <input class="numInput" name="input_y"></input>
+    </view>
+    <text class="alertText">{{alert}}</text>
+
+    <view class="row">
+        <button class="calButton" form-type="submit">计算</button>
+        <button class="calButton" form-type="reset" bindtap="bindReset">清空</button>
+    </view>
+  </form>
+
+  <!--
     <view class="row">
       <scroll-view class="list" scroll-y="true">
         <view class="row" wx:for="{{array}}" wx:key="{{index}}">
@@ -10,15 +55,6 @@
           type="digit" confirm-type="next"></input>
         </view>
       </scroll-view>
-      <view class="column">
-        <button class="calButton" form-type="submit">计算</button>
-        <button class="calButton" form-type="reset" bindtap="bindReset">清空</button>
-        <!--计算结果-->
-        <view class="row" wx:for="{{result}}" wx:key="*this">
-          <text class="resultName">{{item.name}}:</text>
-          <text class="resultNum" >{{item.num}}</text>
-        </view>
-      </view>
     </view>
-  </form>
+  -->
 </view>

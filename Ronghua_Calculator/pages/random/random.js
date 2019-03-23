@@ -5,7 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
+    randomNum: ""
+  },
 
+  bindsubmit: function (e) {
+    var min = Number(e.detail.value.minValue), 
+      max = Number(e.detail.value.maxValue);
+    if (max <= min) {
+      this.setData({ randomNum: "最大值应大于最小值，\n请重新输入" });
+    }
+    else {
+      this.setData({ randomNum: getRandomNum(min, max) });
+    }
+  },
+
+  bintReset: function() {
+    this.setData({ randomNum: "" });
   },
 
   /**
@@ -64,3 +79,9 @@ Page({
 
   }
 })
+
+//从min和max之间产生一个随机数
+function getRandomNum(min, max) {
+  var total = max - min + 1;
+  return Math.floor(Math.random() * total) + min;
+}

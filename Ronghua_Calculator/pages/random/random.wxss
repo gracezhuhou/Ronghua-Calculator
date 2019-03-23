@@ -1,1 +1,27 @@
 /* pages/random/random.wxss */
+.row {
+  margin: 100rpx auto;
+}
+
+.rangeText {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.rangeInput {
+  width: 150rpx;
+  height: 80rpx;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 50rpx;
+}
+
+button {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 20rpx auto;
+  border-radius: 50rpx;
+}

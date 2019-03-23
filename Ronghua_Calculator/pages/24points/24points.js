@@ -11,7 +11,8 @@ Page({
   },
 
   bindsubmit: function(e) {
-    getFormular(e.detail.value);
+    getFormular(e.detail.value.value1, e.detail.value.value2, 
+      e.detail.value.value3, e.detail.value.value4);
     this.setData({ outputFormular: formular })
   },
 
@@ -22,11 +23,18 @@ Page({
 
   // 给用户四个随机数（1-10）用于计算24点
   inputRandomNum: function() {
+    while (true){
+      var value1 = getRandomNum(1, 10), value2 = getRandomNum(1, 10),
+        value3 = getRandomNum(1, 10), value4 = getRandomNum(1, 10);
+      getFormular(value1, value2, value3, value4);
+      if (formular == "无解") continue;
+      else  break;
+    }
     this.setData({
-      inputValue1: getRandomNum(1, 10),
-      inputValue2: getRandomNum(1, 10),
-      inputValue3: getRandomNum(1, 10),
-      inputValue4: getRandomNum(1, 10),
+      inputValue1: value1,
+      inputValue2: value2,
+      inputValue3: value3,
+      inputValue4: value4,
       outputFormular: ""
     })
   },
@@ -89,8 +97,8 @@ Page({
 })
 
 //计算能得出24点的公式
-function getFormular(value) {
-  var array = new Array(value.value1, value.value2, value.value3, value.value4);
+function getFormular(value1, value2, value3, value4) {
+  var array = new Array(value1, value2, value3, value4);
   calFormular(array);
 }
 

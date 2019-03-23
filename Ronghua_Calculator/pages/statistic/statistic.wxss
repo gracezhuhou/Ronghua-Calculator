@@ -1,4 +1,5 @@
 /* pages/statistic/statistic.wxss */
+/*
 .list {
   display: flex;
   flex-direction: column;
@@ -12,16 +13,17 @@
   height: 50rpx;
   text-align: right;
 }
+*/
 
 .numInput {
-  width: 250rpx;
-  height: 50rpx;
-  margin: 5rpx;
+  width: 500rpx;
+  height: 60rpx;
+  margin: 10rpx;
   background-color: aliceblue;
   border-radius: 20rpx;
   border-style: solid;
   border-color: gainsboro;
-  text-align: center;
+  text-align: left;
 }
 
 .resultName {
@@ -36,4 +38,13 @@
   height: 40rpx;
   margin: 10rpx;
   text-align: right;
+  background-color: aliceblue;
+}
+
+.variableNum {
+  width: 100rpx;
+  height: 40rpx;
+  margin: 20rpx;
+  text-align: left;
+  background-color: aliceblue;
 }
