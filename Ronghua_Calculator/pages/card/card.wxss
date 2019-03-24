@@ -1,12 +1,8 @@
 /* pages/card/card.wxss */
-.row {
-  margin: 10rpx;
-}
 
 .cardType {
-  width: 50rpx;
+  width: 45rpx;
   height: 60rpx;
-  margin-right: 20rpx;
   text-align: center;
   line-height: 60rpx;
   background-color: silver;
@@ -19,15 +15,15 @@
   margin: 10rpx auto;
 }
 
-.buttonLess {
-  width: 60rpx;
+.buttonLess{
+  width: 40rpx;
   height: 60rpx;
   text-align: center;
   line-height: 60rpx;
 }
 
 .cardNum {
-  width: 70rpx;
+  width: 45rpx;
   height: 60rpx;
   text-align: center;
   line-height: 60rpx;
@@ -38,4 +34,11 @@
   height: 60rpx;
   text-align: center;
   line-height: 60rpx;
+}
+
+.chanceText {
+  width: 240rpx;
+  height: 90rpx;
+  margin: 5rpx;
+  background-color: aquamarine;
 }

@@ -1,4 +1,6 @@
 // pages/statistic/statistic.js
+var doRegress = true;
+
 Page({
 
   /**
@@ -27,15 +29,40 @@ Page({
 
   bindsubmit: function (e) {
     this.setData({ alert: "输入时请用“,”分隔数字" });
+    var newResult_x = this.data.result_x, length_x = newResult_x.length,
+      newResult_y = this.data.result_y, length_y = newResult_y.length,
+      newRegresion = this.data.regression, length_r = newRegresion.length;
+
+    for (var i = 0; i < length_x; ++i) {
+      newResult_x[i].num = "";
+    }
+    for (var i = 0; i < length_y; ++i) {
+      newResult_y[i].num = "";
+    }
+    for (var i = 0; i < length_r; ++i) {
+      newRegresion[i].num = "";
+    }
+    this.setData({
+      result_x: newResult_x,
+      result_y: newResult_y,
+      regression: newRegresion
+    });
 
     // 将输入的值赋给array
     var array_x = new Array(), array_y = new Array();
     array_x = getValue(e.detail.value.input_x);
     array_y = getValue(e.detail.value.input_y);
-    var length_x = array_x.length, length_y = array_y.length;
+    if (array_x == null) {
+      this.setData({ alert: "输入含非法字符" });
+      ;
+      return;
+    }
+    if (array_y == null) {
+      this.setData({ alert: "输入含非法字符" });
+      return;
+    }
 
-    if (array_x == null) this.setData({ alert: "输入含非法字符" });
-    if (array_y == null) this.setData({ alert: "输入含非法字符" });
+    var length_x = array_x.length, length_y = array_y.length;
 
     // 求和
     var sum_x = getSum(array_x), sum_y = getSum(array_y);
@@ -68,22 +95,33 @@ Page({
     // 方差
     var variance_x = getVariance(array_x, average_x),
       variance_y = getVariance(array_y, average_y);
-    newResult_x[3].num = variance_x.toFixed(3);
-    newResult_y[3].num = variance_y.toFixed(3);
+    newResult_x[3].num = variance_x;
+    newResult_y[3].num = variance_y;
     // 标准差
     var stdDeviation_x = Math.sqrt(variance_x),
       stdDeviation_y = Math.sqrt(variance_y);
-    newResult_x[4].num = stdDeviation_x.toFixed(3);
-    newResult_y[4].num = stdDeviation_y.toFixed(3);
+    newResult_x[4].num = stdDeviation_x;
+    newResult_y[4].num = stdDeviation_y;
 
-    this.setData({
-      result_x: newResult_x,
-      result_y: newResult_y
-    });
+    // 小数点后位数
+    for (var i = 0; i < newResult_x.length; ++i) {
+      if ((Number(newResult_x[i].num) * 1000) % 1 != 0) {
+        newResult_x[i].num = newResult_x[i].num.toFixed(3);
+      }
+    }
+    for (var i = 0; i < newResult_y.length; ++i) {
+      if ((Number(newResult_y[i].num) * 1000) % 1 != 0) {
+        newResult_y[i].num = newResult_y[i].num.toFixed(3);
+      }
+    }
 
+    if (length_x != 0)
+      this.setData({ result_x: newResult_x });
+    if (length_y != 0)
+      this.setData({ result_y: newResult_y });
 
+    if (doRegress && length_x == length_y && length_x != 0 && length_y != 0) {
     // 回归计算
-    if (length_x == length_y) {
       var a1 = 0, a2 = 0, a, b, r;
       for (var i = 0; i < length_x; ++i) {
         a1 = a1 + (array_x[i] - average_x) * (array_y[i] - average_y);
@@ -108,20 +146,21 @@ Page({
 
       // 小数点后位数
       for (var i = 0; i < newRegression.length; ++i) {
-        if ((newRegression[i].num * 1000) % 1 != 0) {
+        if ((Number(newRegression[i].num) * 1000) % 1 != 0) {
           newRegression[i].num = newRegression[i].num.toFixed(3);
         }
       }
       this.setData({ regression: newRegression });
     }
+    
   },
 
   // 清空表单和计算结果
   bindReset: function () {
     this.setData({ alert: "输入时请用“,”分隔数字" });
     var newResult_x = this.data.result_x, length_x = newResult_x.length,
-      newResult_y = this.data.result_y, length_y = newResult_y.length;
-      newRegresion = this.data.regression; length_r = newRegresion.length;
+      newResult_y = this.data.result_y, length_y = newResult_y.length,
+      newRegresion = this.data.regression, length_r = newRegresion.length;
        
     for (var i = 0; i < length_x; ++i) {
       newResult_x[i].num = "";
@@ -137,6 +176,10 @@ Page({
       result_y: newResult_y,
       regression: newRegresion
     });
+  },
+
+  checkboxChange: function(e) {
+    doRegress = !doRegress;
   },
 
   /**
@@ -201,9 +244,15 @@ function getValue(value) {
   var length = value.length, array = new Array();
   for (var i = 0, j = 0; i < length; ++i) {
     var ch = value[i];
-    if ("0" <= ch && ch <= "9") {
+    if (("0" <= ch && ch <= "9") || ch == ".") {
       if (array[j] == undefined) {
-        array[j] = ch
+        if (ch == ".") array[j] = "0.";
+        else array[j] = ch;
+      }
+      else if (ch == ".") {
+        var n = String(array[j]).indexOf(".");
+        if (n == -1) array[j] = array[j] + ch;
+        else return null;
       }
       else array[j] = array[j] + ch;
     }

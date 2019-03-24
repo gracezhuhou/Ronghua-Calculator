@@ -2,16 +2,24 @@
 <view class="container">
   <text>随机数</text>
   <form bindsubmit="bindsubmit">
-    <view class="row">
-      <text class="rangeText">最小值</text>
-      <input class="rangeInput" type="number" name="minValue" value="0"></input>
+    <view style="display: {{isVisible_num}};">
+      <view class="row">
+        <text class="rangeText">最小值</text>
+        <input class="rangeInput" type="number" name="minValue" value="0"></input>
+      </view>
+      <view class="row">
+        <text class="rangeText">最大值</text>
+        <input class="rangeInput" type="number" name="maxValue" value="100"></input>
+      </view>
     </view>
-    <view class="row">
-      <text class="rangeText">最大值</text>
-      <input class="rangeInput" type="number" name="maxValue" value="100"></input>
+    <view style="display: {{isVisible_text}};">
+      <text>自定义随机内容：\n</text>
+      <text>(输入时请用“,”分隔)</text>
+      <input class="textInput" type="text" name="customValue"></input>
     </view>
     <button form-type="submit">生  成</button>
     <button form-type="reset" bindtap="bintReset">清  空</button>
+    <checkbox bindtap="checkboxChange">自定义随机内容</checkbox>
   </form>
 
   <text>{{randomNum}}</text>

@@ -1,19 +1,19 @@
 {
   "pages": [
+    "pages/statistic/statistic",
     "pages/index/index",
     "pages/logs/logs",
     "pages/basic/basic",
     "pages/mortgage/mortgage",
     "pages/24points/24points",
     "pages/card/card",
-    "pages/random/random",
-    "pages/statistic/statistic",
-    "pages/function/function"
+    "pages/random/random"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#8d1606",
     "navigationBarTitleText": "融华计算器",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

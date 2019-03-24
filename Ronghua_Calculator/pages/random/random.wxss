@@ -18,6 +18,11 @@
   border-radius: 50rpx;
 }
 
+.textInput {
+  width: 400rpx;
+  background-color: aliceblue;
+}
+
 button {
   width: 200rpx;
   height: 100rpx;

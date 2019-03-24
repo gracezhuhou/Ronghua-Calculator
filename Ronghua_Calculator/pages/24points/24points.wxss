@@ -1,21 +1,45 @@
 /* pages/24points/24points.wxss */
+
+/* 输出部分 */
+.outputView {
+  width: 100%;
+  height: 200rpx;
+  background-color: #b61f0c; 
+}
+
+.outputText {
+  margin-left: 70rpx;
+  line-height: 200rpx;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 form {
-  margin: 100rpx 0 20rpx 0;
+  margin: 40rpx 0 20rpx 0;
 }
 
 .numInput {
   width: 200rpx;
-  height: 80rpx;
-  margin: 30rpx 40rpx;
-  /* border-style: solid; */
-  border-radius: 30rpx;
-  background-color: aliceblue;
+  height: 130rpx;
+  margin: 30rpx 50rpx;
   text-align: center;
+  border: 10rpx solid #d9d9d9;
+  border-radius: 15rpx;
+  background-color: #f1f1f1;
+  border-style: solid;
+  font-size: 1.3rem;
 }
 
 .calButton {
-  width: 400rpx;
+  width: 300rpx;
   height: 80rpx;
-  margin: 30rpx auto;
+  margin: 40rpx auto;
   line-height: 80rpx;
+  background-color: #8d1606;
+  color: #fff;
+}
+
+#calButton1 {
+  margin-top: 75rpx;
 }
