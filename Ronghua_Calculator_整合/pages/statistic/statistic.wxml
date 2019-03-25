@@ -1,0 +1,59 @@
+<!--pages/statistic/statistic.wxml-->
+<view class="container">
+  <!--计算结果-->
+  <view class="resultView">
+    <view class="resultText">
+      <view class="row">
+        <text>x:</text>
+        <view class="column">
+          <view class="row" wx:for="{{result_x}}" wx:key="{{index}}">
+            <text class="resultName">{{item.name}}:</text>
+            <text class="resultNum">{{item.num}}</text>
+          </view>
+        </view>
+        <text class="text_y">y:</text>
+        <view class="column">
+          <view class="row" wx:for="{{result_y}}" wx:key="{{index}}">
+            <text class="resultName">{{item.name}}:</text>
+            <text class="resultNum">{{item.num}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="regressView">
+        <text class="regressText">回归计算：{{formular}}</text>
+        <view class="row">
+          <view class="row" wx:for="{{regression}}" wx:key="{{index}}">
+            <text class="variable">{{item.variable}}=</text>
+            <text class="variableNum">{{item.num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+` <!--数值输入-->
+  <form bindsubmit="bindsubmit">
+    <view class="inputView">
+      <view class="row">
+        <text class="inputText">x:</text>
+        <input class="numInput" name="input_x"></input>
+      </view>
+      <view class="row">
+        <text class="inputText">y:</text>
+        <input class="numInput" name="input_y"></input>
+      </view>
+      <view class="alertTextView">
+        <text class="alertText">{{alert}}</text>
+      </view>
+      <checkbox class="checkBox" bindtap="checkboxChange" 
+      checked="true" color="#8d1606">是否回归计算</checkbox>
+    </view>
+
+    <view class="buttonView">
+      <button class="calButton" form-type="submit">计算</button>
+      <button class="calButton" form-type="reset" bindtap="bindReset">清空</button>
+    </view>
+  </form>
+</view>

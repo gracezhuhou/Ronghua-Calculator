@@ -1,0 +1,31 @@
+<!--pages/mortgage/mortgage.wxml-->
+<view class='container'>
+   <view class='result'>
+      <view class="title">月还款额</view>
+      <view class='value'>{{paymentValue}}</view>
+   </view>
+   <view class='result'>
+      <view class="title">还款总额</view>
+      <view class='value'>{{refundValue}}</view>
+   </view>
+   <view class='result'>
+      <view class="title">利息总额</view>
+      <view class='value'>{{interestValue}}</view>
+   </view>
+   <form>
+   <view class="item">
+      <text class="label">贷款金额</text>
+      <input type="text" bindinput="bindKeyLoanInput" />
+    </view>
+    <view class="item">
+      <text class="label">贷款利率</text>
+      <input type="digit" bindinput="bindKeyRateInput"  />
+    </view>
+    <view class="item">
+      <text class="label">还款月数</text>
+      <input type="digit" bindinput="bindKeyNInput"/>
+    </view>
+    <button class="calButton" bindtap='calBtn'>计算</button>
+    <button class="calButton" form-type='reset' bindtap='clrBtn'>清空</button>
+    </form>
+</view>

@@ -1,0 +1,124 @@
+/* pages/statistic/statistic.wxss */
+
+/* 输出部分 */
+.resultView {
+  width: 100%;
+  height: inherent;
+  background-color: #b61f0c; 
+}
+
+.resultText {
+  width: 100%;
+  margin: 20rpx 65rpx;
+  color: white;
+}
+
+/* x & y */
+.regressView {
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.text_y {
+  margin-left: 20rpx;
+}
+
+.resultName {
+  width: 100rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.resultNum {
+  width: 120rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  text-align: right;
+  background-color: white;
+  border-radius: 7rpx;
+  color: black;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+/* 回归 */
+.regressText {
+   font-size: 0.95rem;
+}
+
+.variable {
+  height: 40rpx;
+  margin: 20rpx 0;
+  line-height: 40rpx;
+  font-size: 0.8rem;
+}
+
+.variableNum {
+  width: 120rpx;
+  height: 40rpx;
+  margin: 20rpx 40rpx 20rpx 10rpx;
+  text-align: right;
+  background-color: white;
+  border-radius: 7rpx;
+  color: black;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+
+/* 输入部分 */
+.inputView {
+  width: 100%;
+  margin: 5rpx 80rpx;
+  color: rgb(88, 88, 88);
+}
+
+.inputText {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 15rpx 0;
+}
+
+.numInput {
+  width: 450rpx;
+  height: 60rpx;
+  margin: 15rpx 30rpx;
+  border-color: gainsboro;
+  text-align: left;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 6rpx;
+  background-color: #f1f1f1;
+  padding: 0 20rpx;
+  color: black;
+}
+
+.alertTextView {
+  margin: 10rpx 0 30rpx;
+}
+
+.alertText {
+  width: fit-content;
+  font-size: 0.8rem;
+}
+
+.checkBox {
+  font-size: 0.95rem;
+}
+
+/* 按键 */
+.buttonView {
+  display: flex;
+  flex-direction: row;
+  margin: 0 45rpx;
+}
+
+.calButton {
+  width: 250rpx;
+  height: 80rpx;
+  margin: 40rpx 40rpx;
+  background-color: #8d1606;
+  color: white;
+  line-height: 80rpx;
+}

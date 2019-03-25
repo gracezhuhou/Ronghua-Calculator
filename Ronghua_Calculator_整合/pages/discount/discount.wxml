@@ -1,0 +1,24 @@
+<!--pages/discount/discount.wxml-->
+<view class='container'>
+   <view class='result'>
+      <view class="title">{{resultTitle}}</view>
+      <view class='value'>{{resultValue}}</view>
+   </view>
+   <image class='picture_cf' src='/pic/discount.png'></image>
+   <form>
+   <view class="item">
+      <text class="label">现金流（CashFlow)</text>
+      <input type="text" bindinput="bindKeyCFInput" />
+    </view>
+    <view class="item">
+      <text class="label">折现率(I/Y)</text>
+      <input type="digit" bindinput="bindKeyInterestInput"  />
+    </view>
+    <view class="item">
+      <text class="label">净现值(NPV)</text>
+      <input type="digit" bindinput="bindKeyNPVInput"/>
+    </view>
+    <button class="calButton" bindtap='calBtn'>计算</button>
+    <button class="calButton" form-type='reset' bindtap='clrBtn'>清空</button>
+    </form>
+</view>

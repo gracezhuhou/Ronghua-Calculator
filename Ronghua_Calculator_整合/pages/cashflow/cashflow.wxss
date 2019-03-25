@@ -1,0 +1,23 @@
+/* pages/cashflow/cashflow.wxss */
+.container{
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.picture_cf{
+  height: 375rpx;
+  width: 375rpx;
+}
+
+.nav-default{
+  color: #0a0a0a
+}
+
+.nav-hover{
+  color: #8d1606;
+}
+
+

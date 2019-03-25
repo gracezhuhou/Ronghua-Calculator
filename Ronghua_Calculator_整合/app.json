@@ -1,0 +1,23 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/basic/basic",
+    "pages/mortgage/mortgage",
+    "pages/cashflow/cashflow",
+    "pages/annuity/annuity",
+    "pages/discount/discount",
+    "pages/24points/24points",
+    "pages/statistic/statistic",
+    "pages/card/card",
+    "pages/random/random",
+    "pages/card&24/card&24"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8d1606",
+    "navigationBarTitleText": "融 华",
+    "navigationBarTextStyle": "white"
+  }
+}

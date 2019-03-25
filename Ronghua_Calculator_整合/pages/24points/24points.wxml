@@ -1,0 +1,30 @@
+<!--pages/24points/24points.wxml-->
+<view class="container">
+  <!-- 输出24点公式 -->
+  <view class="outputView">
+    <text class="outputText">{{outputFormular}}</text>
+  </view>
+
+  <!-- 输入 -->
+  <form bindsubmit="bindsubmit">
+    <view class="row">
+      <text class="numText">数字1：</text>
+      <input class="numInput" name="value1" value="{{inputValue1}}" type="number" maxlength="2"></input>
+    </view>
+    <view class="row">
+      <text class="numText">数字2：</text>
+      <input class="numInput" name="value2" value="{{inputValue2}}" type="number" maxlength="2"></input>
+    </view>
+    <view class="row">
+      <text class="numText">数字3：</text>
+      <input class="numInput" name="value3" value="{{inputValue3}}" type="number" maxlength="2"></input>
+    </view>
+    <view class="row">
+      <text class="numText">数字4：</text>
+      <input class="numInput" name="value4" value="{{inputValue4}}" type="number" maxlength="2"></input>
+    </view>
+    <button class="calButton" id="calButton1" form-type="submit">计算</button>
+    <button class="calButton" bindtap="inputRandomNum">随机</button>
+    <button class="calButton" form-type="reset" bindtap="bindReset">清空</button>
+  </form>
+</view>

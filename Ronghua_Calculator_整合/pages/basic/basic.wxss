@@ -1,0 +1,50 @@
+/* pages/basic/basic.wxss */
+.container{
+  display: flex;
+}
+scroll-view {
+  margin-top: 40rpx;
+  width: 600rpx;
+  height: 200rpx;
+  /* position: absolute;   固定在顶端 */
+ 
+}
+
+.formularText {
+  width: 100%;
+  text-align: left;
+  display: block;
+  word-break: break-all;  /* 强制换行 */
+}
+
+.resultText {
+  width: 600rpx;
+  text-align: right;
+  /* position: absolute;   固定在顶端
+  top: 230rpx; */
+}
+
+swiper {
+  width: 100%;
+  height: 860rpx;
+  position: absolute;   /* 固定在底端 */
+  bottom: 0;
+}
+
+swiper-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calButton {
+  /* border-radius: 30rpx; 调整弧度*/
+  margin: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;  /* 垂直居中 */
+  border-color: #8d1606;
+  border-style: outset;
+}

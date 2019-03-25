@@ -1,0 +1,32 @@
+<!--pages/annuity.wxml-->
+<view class='container'>
+   <view class='result'>
+      <view class="title">{{resultTitle}}</view>
+      <view class='value'>{{resultValue}}</view>
+   </view>
+   <image class='picture_cf' src='/pic/cf.png'></image>
+   <form>
+   <view class="item">
+      <text class="label">现值(PV)</text>
+      <input type="digit" bindinput="bindKeyPVInput"  class="" />
+    </view>
+    <view class="item">
+      <text class="label">息票(C)</text>
+      <input type="digit" bindinput="bindKeyCInput"  class="" />
+    </view>
+    <view class="item">
+      <text class="label">折现率(I/Y)</text>
+      <input type="digit" bindinput="bindKeyInterestInput"  class="" />
+    </view>
+    <view class="item">
+      <text class="label">期数(N)</text>
+      <input type="digit" bindinput="bindKeyNInput" maxlength="6" class="" />
+    </view>
+    <view class="item">
+      <text class="label">面值(FV)</text>
+      <input type="digit" bindinput="bindKeyFVInput"  class="" />
+    </view>
+    <button class="calButton" bindtap='calBtn'>计算</button>
+    <button class="calButton" form-type='reset'>清空</button>
+    </form>
+</view>

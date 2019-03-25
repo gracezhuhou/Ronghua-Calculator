@@ -1,0 +1,38 @@
+<!--pages/random/random.wxml-->
+<view class="container">
+  <!-- 随机结果 -->
+  <view class="resultView">
+    <view class="resultText">
+      <text class="resultHeading">随机生成:\n</text>
+      <text class="resultNum">{{randomNum}}</text>
+    </view>
+  </view>
+
+  <!-- 随机范围输入 -->
+  <form bindsubmit="bindsubmit">
+    <view class="inputView" style="display: {{isVisible_num}};">
+      <view class="row">
+        <text class="rangeText">最 小 值 :</text>
+        <input class="rangeInput" type="number" name="minValue" value="0"></input>
+      </view>
+      <view class="row">
+        <text class="rangeText">最 大 值 :</text>
+        <input class="rangeInput" type="number" name="maxValue" value="100"></input>
+      </view>
+    </view>
+    <view class="inputView" style="display: {{isVisible_text}};">
+      <view class="inputDiyView">
+        <text>自定义随机内容：\n</text>
+        <text class="textNote">(输入时请用“,”分隔)</text>
+        <textarea class="textInput" type="text" name="customValue"></textarea>
+      </view>
+    </view>
+    <view class="checkboxView">
+      <checkbox bindtap="checkboxChange" color="#8d1606"> 自定义随机内容</checkbox>
+    </view>
+    <button form-type="submit">生  成</button>
+    <button form-type="reset" bindtap="bintReset">清  空</button>
+  </form>
+  
+</view>
+

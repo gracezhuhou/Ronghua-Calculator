@@ -1,0 +1,91 @@
+/* pages/random/random.wxss */
+
+/* 输出部分 */
+.resultView {
+  width: 100%;
+  height: 300rpx;
+  background-color: #b61f0c; 
+}
+
+.resultText {
+  margin-left: 70rpx;
+  color: white;
+  font-weight: bold;
+}
+
+.resultHeading {
+  line-height: 150rpx;
+  font-size: 1.1rem;
+}
+
+.resultNum {
+  line-height: 80rpx;
+  font-size: 1.7rem;
+}
+
+/* 输入部分 */
+.inputView {
+  height: 400rpx;
+}
+
+/* 数值范围 */
+.row {
+  margin: 0 auto 30rpx auto;
+  padding: 60rpx 0 30rpx 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.rangeText {
+  width: 200rpx;
+  height: 80rpx;
+  margin: 0 20rpx 0 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.rangeInput {
+  width: 170rpx;
+  height: 80rpx;
+  margin: 0 60rpx 0 20rpx;
+  text-align: center;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 6rpx;
+  background-color: #f1f1f1;
+  color:#010708;
+}
+
+/* 自定义 */
+.inputDiyView {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70rpx;
+  line-height: 60rpx;
+}
+
+.textNote {
+  font-size: 0.8rem;
+}
+
+.textInput {
+  width: 420rpx;
+  height: 150rpx;
+  margin-top: 25rpx;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 6rpx;
+  background-color: #f1f1f1;
+  color:#010708;
+}
+
+.checkboxView {
+  margin: 30rpx auto 70rpx auto;
+  text-align: center;
+}
+
+button {
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 40rpx auto;
+  background-color: #8d1606;
+  color: #fff;
+}

@@ -1,0 +1,59 @@
+<!--pages/basic/basic.wxml-->
+<view class="container">
+  <!-- <text>基础计算器</text> -->
+  <scroll-view scroll-y="true">
+    <text class="formularText">{{formular}}</text>
+  </scroll-view>
+  <text class="resultText">{{result}}</text>
+
+  <swiper indicator-dots="true">
+    <swiper-item>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_clear">C</button>
+        <button class="calButton" bindtap="bindTap_delete">Del</button>
+       <button class="calButton" bindtap="bindTap_bracket">( )</button>
+        <button class="calButton" bindtap="bindTap_divide">÷</button>
+      </view>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_seven">7</button>
+        <button class="calButton" bindtap="bindTap_eight">8</button>
+        <button class="calButton" bindtap="bindTap_nine">9</button>
+        <button class="calButton" bindtap="bindTap_multiply">×</button>
+      </view>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_four">4</button>
+        <button class="calButton" bindtap="bindTap_five">5</button>
+        <button class="calButton" bindtap="bindTap_six">6</button>
+        <button class="calButton" bindtap="bindTap_minus">-</button>
+      </view>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_one">1</button>
+        <button class="calButton" bindtap="bindTap_two">2</button>
+        <button class="calButton" bindtap="bindTap_three">3</button>
+        <button class="calButton" bindtap="bindTap_add">+</button>
+      </view>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_zero">0</button>
+        <button class="calButton" bindtap="bindTap_point">.</button>
+        
+        <button class="calButton" bindtap="bindTap_pm">+/-</button>
+        <button class="calButton" bindtap="bindTap_equal">=</button>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class="row">
+        <button class="calButton" bindtap="bindTap_factorial">!</button>
+        <button class="calButton" bindtap="bindTap_sqrt"> √</button>
+        <button class="calButton" bindtap="bindTap_square">x²</button>
+       
+      </view>
+      <view class="row">
+         <button class="calButton" bindtap="bindTap_exp">e^x</button>
+        <button class="calButton" bindtap="bindTap_power">x^y</button>
+         <button class="calButton" bindtap="bindTap_percent">%</button>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>
