@@ -1,4 +1,5 @@
 /* pages/mortgage/mortgage.wxss */
+
 .container{
   height: 100%;
   display: flex;
@@ -45,6 +46,43 @@
   color:#010708;
 }
 
+ .tip{
+   display: flex;
+   width: 100%;
+   background-color: #8d1606;
+   margin: 5rpx;
+   /* flex: 1;
+   align-items: center;
+   padding-left: 20rpx;
+   padding-right: 20rpx; */
+ }
+
+ .tip .label{
+  float: left;
+  padding: 20rpx 40rpx;
+  font-size: 30rpx;
+  padding-top:20rpx;
+  color: #f8f7f7;
+  /* background-color: #f1e8e7; */
+  font-weight:500;
+  vertical-align: middle;
+  margin-left: 10%;
+  margin-right: 8%;
+}
+
+.tip input{
+  margin-top: 10rpx;
+  width: 300rpx;
+  height:56rpx;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 6rpx;
+  text-align: right;
+  padding-right: 0rpx;
+  margin-left: 10 rpx;
+  /* background-color: #f1f1f1; */
+  color:#eef1f1;
+}
+
 .item {
   border-bottom: 1px solid #e2e2e2;
   height:56rpx;
@@ -84,4 +122,13 @@
   margin: 50rpx auto;
   background-color: #8d1606;
   color: #fff;
+}
+
+.detail{
+  background-color: #8d1606;
+  width: 373rpx;
+   font-size: 30rpx;
+  margin:5rpx;
+  padding: 10rpx;
+  color: #f8f7f7;
 }

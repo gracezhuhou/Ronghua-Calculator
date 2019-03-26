@@ -1,9 +1,9 @@
 /* pages/cashflow/cashflow.wxss */
 .container{
   background-color: white;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
 }
 
@@ -13,11 +13,22 @@
 }
 
 .nav-default{
-  color: #0a0a0a
+  color: #0a0a0a;
+  font-weight: 600;
 }
 
 .nav-hover{
   color: #8d1606;
 }
 
+.navi{
+  width: 350rpx;
+  height: 60rpx;
+  border-color:  #8d1606;
+  margin-top: 150rpx;
+  border-style: outset;
+  text-align: center;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
 

@@ -1,11 +1,14 @@
 <!--pages/basic/basic.wxml-->
 <view class="container">
   <!-- <text>基础计算器</text> -->
-  <scroll-view scroll-y="true">
-    <text class="formularText">{{formular}}</text>
-  </scroll-view>
-  <text class="resultText">{{result}}</text>
-
+  <view class='result'>
+    <scroll-view class='for' scroll-y="true">
+     <text class="formularText">{{formular}}</text>
+   </scroll-view>
+   <scroll-view  class='res' scroll-y="true">
+   <text class="resultText">{{result}}</text>
+   </scroll-view>
+  </view>
   <swiper indicator-dots="true">
     <swiper-item>
       <view class="row">

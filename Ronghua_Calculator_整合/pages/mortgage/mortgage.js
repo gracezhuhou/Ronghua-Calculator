@@ -10,7 +10,10 @@ Page({
     n: -1,
     paymentValue: 0,
     refundValue: 0,
-    interestValue: 0
+    interestValue: 0,
+    look_up: 0,
+    interest: 0,
+    principle: 0
   },
 
   /**
@@ -18,6 +21,11 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  bindKeyLookUpInput: function(e){
+    this.setData({
+      look_up: parseInt(e.detail.value)
+    })
   },
 
   bindKeyLoanInput: function (e) {
@@ -71,7 +79,7 @@ Page({
       })
     }
     else{
-      var c = 0, pv = this.data.loan, int = this.data.r, fv = 0, n = this.data.n;
+      var c = 0, pv = this.data.loan, int = this.data.r /12 , fv = 0, n = this.data.n, look_up = this.data.look_up, tmp_i = 0, tmp_p = this.data.loan, it = 0, p = 0;
       c = (pv * Math.pow(1 + int, n) * int - fv * int) / (Math.pow(1 + int, n) - 1)
       this.setData({
         paymentValue: c.toFixed(4)//保留四位小数
@@ -83,6 +91,17 @@ Page({
       })
       this.setData({
         interestValue: iTotal.toFixed(4)
+      })
+      for(var j = 1; j <= look_up;  j++){
+        it = parseFloat((tmp_p * int).toFixed(5));
+        p = parseFloat((c - it).toFixed(5));
+        tmp_p = tmp_p - p;
+      }
+      this.setData({
+        interest: it
+      })
+      this.setData({
+       principle: p
       })
     }  
   },

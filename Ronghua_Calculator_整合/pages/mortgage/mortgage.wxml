@@ -12,6 +12,16 @@
       <view class="title">利息总额</view>
       <view class='value'>{{interestValue}}</view>
    </view>
+   <view class='result'>
+   <view class='tip'>
+      <text class="label">期数</text>
+      <input type="text" bindinput="bindKeyLookUpInput" />
+   </view>
+   </view>
+   <view class='result'>
+    <view class="detail">当月偿还利息：<text class="">{{interest}}</text></view>
+      <view class="detail">当月偿还本金：<text class="">{{principle}}</text></view>
+   </view>
    <form>
    <view class="item">
       <text class="label">贷款金额</text>

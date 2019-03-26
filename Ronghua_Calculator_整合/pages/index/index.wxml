@@ -1,45 +1,27 @@
 <!--index.wxml-->
 <view class="container">
-<view class = "navi"> 
-<view class="row">
-    <navigator class="calNav" url='/pages/basic/basic'>
+  <view class="row" id="row1">
+    <navigator class="calNav" id="calNav1" url='/pages/basic/basic'>
       <cover-image class="calPic" src='/pic/BasicCal.png'></cover-image>
     </navigator>
-    <navigator class="calNav" url='/pages/mortgage/mortgage'>
+    <navigator class="calNav" id="calNav2" url='/pages/statistic/statistic'>
+      <cover-image class="calPic" src='/pic/Statistic.png'></cover-image>
+    </navigator> 
+  </view>
+  <view class="row" id="row2">
+    <navigator class="calNav" id="calNav3" url='/pages/cashflow/cashflow'>
+      <cover-image class="calPic" src='/pic/FinanceCal.png'></cover-image>
+    </navigator>
+    <navigator class="calNav" id="calNav4" url='/pages/mortgage/mortgage'>
       <cover-image class="calPic" src='/pic/HouseCal.png'></cover-image>
     </navigator>
   </view>
-  <view class="row">
-    <navigator class="calNav" url='/pages/cashflow/cashflow'>
-      <cover-image class="calPic" src='/pic/FinanceCal.png'></cover-image>
+  <view class= "row" id="row3">
+    <navigator class="calNav" id="calNav5" url='/pages/random/random'>
+      <cover-image class="calPic" src='/pic/Random.png'></cover-image>
     </navigator>
-    <navigator class="calNav" url='/pages/card&24/card&24'>
+    <navigator class="calNav" id="calNav6" url='/pages/card&24/card&24'>
       <cover-image class="calPic" src='/pic/Card24.png'></cover-image>
     </navigator>
   </view>
-  <view class= "row">
-    <navigator class="calNav" url='/pages/statistic/statistic'>
-      <cover-image class="calPic" src='/pic/Statistic.png'></cover-image>
-    </navigator> 
-     <!-- <navigator class="calNav" url='/pages/card/card'>
-      <cover-image class="calPic" src='/pic/Card.png'></cover-image>
-    </navigator> -->
-     <navigator class="calNav" url='/pages/random/random'>
-      <cover-image class="calPic" src='/pic/Random.png'></cover-image>
-    </navigator>
-  </view>
-</view>
-  
-
-
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
 </view>

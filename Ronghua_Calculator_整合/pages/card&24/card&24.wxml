@@ -1,6 +1,6 @@
 <!--pages/card&24/card&24.wxml-->
 <view class='container'>
   <image class='picture_cf' src='/pic/CardAnd24.png'></image>
-  <navigator url='/pages/card/card' hover-class='nav-hover' class='nav-default'>记牌</navigator>
-  <navigator url='/pages/24points/24points' hover-class='nav-hover' class='nav-default'>24点</navigator>
+  <navigator url='/pages/card/card' hover-class='nav-hover' class='nav-default'>记 牌</navigator>
+  <navigator url='/pages/24points/24points' hover-class='nav-hover' class='nav-default'>24 点</navigator>
 </view>

@@ -1,23 +1,27 @@
 /* pages/card&24/card&24.wxss */
-.container{
-  background-color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .picture_cf{
   height: 375rpx;
   width: 375rpx;
+  margin-top: 60rpx;
 }
 
 .nav-default{
-  color: #0a0a0a
+  color: #0a0a0a;
+  width: 350rpx;
+  height: 60rpx;
+  border-color:  #8d1606;
+  margin-top: 150rpx;
+  border-style: outset;
+  text-align: center;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  font-weight: 600;
+  line-height: 60rpx;
 }
 
 .nav-hover{
   color: #8d1606;
+  background-color: gainsboro;
 }
 
 

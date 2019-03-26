@@ -11,9 +11,15 @@ Page({
   },
 
   bindsubmit: function(e) {
-    getFormular(e.detail.value.value1, e.detail.value.value2, 
-      e.detail.value.value3, e.detail.value.value4);
-    this.setData({ outputFormular: formular })
+    if (e.detail.value.value1 == "" || e.detail.value.value2 == "" ||
+      e.detail.value.value3 == "" || e.detail.value.value4 == "") {
+      this.setData({ outputFormular: "_(:△」∠)_" })
+      }
+    else {
+      getFormular(e.detail.value.value1, e.detail.value.value2, 
+        e.detail.value.value3, e.detail.value.value4);
+      this.setData({ outputFormular: formular})
+    }
   },
 
   // 清空

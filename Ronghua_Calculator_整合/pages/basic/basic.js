@@ -218,7 +218,9 @@ function calculate(formular) {
   var result = [];
   var stack = new Stack();
   result = transform(arr);
+  var error = false;//记录运算是否规范
   for (var i = 0; i < result.length; i++) {
+    if(error) break;
     var symbol = result[i];
     if (isDigital(symbol)) { //数字直接入栈
       if(symbol == "e") 
@@ -262,6 +264,11 @@ function calculate(formular) {
         case "÷":
           num1 = stack.pop(); //取出两个数
           num2 = stack.pop();
+          if (num1 == 0){
+            stack.push("除数不能为0，请重新输入");
+            error = true;
+            break;
+          }
           // stack.push(num2 / num1);
           ans = parseFloat((num2 / num1).toFixed(6));
           stack.push(ans);
@@ -282,6 +289,11 @@ function calculate(formular) {
           break;
         case "!":
           var num = stack.pop(); //取出一个数
+          if(num < 0){
+            stack.push("无法计算负数阶乘，请重新输入");
+            error = true;
+            break;
+          }
           var n = num, tmp = 1; 
           // for(var i = 0; i < n - 1; i++ ){
           //   if(n > 1)
@@ -306,7 +318,7 @@ function calculate(formular) {
       }
     }
   }
-  return stack.pop();
+  return String(stack.pop());
 
   // return formular[0];
 }

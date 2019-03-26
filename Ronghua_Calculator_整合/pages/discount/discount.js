@@ -20,8 +20,8 @@ Page({
   },
 
   bindKeyCFInput: function (e) {
-    var originalStr = e.detail.value, tmpArr = [];
-    tmpArr = originalStr.split(",");//输入现金流以逗号分隔
+    var originalStr = e.detail.value, tmpArr = [], patt = new RegExp(",|，");
+    tmpArr = originalStr.split(patt);//输入现金流以逗号分隔
     this.setData({
       cfArray: tmpArr
     })
@@ -49,7 +49,7 @@ Page({
         index = i;
       }
     }   
-    if (empty != 1 || this.data.cfArray.length == 0) {
+    if (empty != 1 && this.data.cfArray.length != 0) {
       this.setData({
         resultTitle: '请重新输入'
       })

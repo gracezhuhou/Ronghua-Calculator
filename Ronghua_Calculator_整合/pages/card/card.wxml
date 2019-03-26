@@ -11,19 +11,19 @@
       <text class="chanceTextType">炸弹</text>
     </view>
     <view class="column">
-      <text class="chanceHeading">他人出牌：</text>
+      <text class="chanceHeading">他人出牌的剩余可能：</text>
       <text class="chanceText">{{chance_double}}</text>
       <text class="chanceText">{{chance_triple}}</text>
       <text class="chanceText">{{chance_straight}}</text>
       <text class="chanceText">{{chance_bomb}}</text>
     </view>
-    <view class="column">
+    <!-- <view class="column">
       <text class="chanceHeading">自己出牌：</text>
       <text class="chanceText">{{chance_double_my}}</text>
       <text class="chanceText">{{chance_triple_my}}</text>
       <text class="chanceText">{{chance_straight_my}}</text>
       <text class="chanceText">{{chance_bomb_my}}</text>
-    </view>
+    </view> -->
   </view>
 
   <!-- 他人的牌 -->
@@ -72,6 +72,10 @@
     <button class="calButton" bindtap="bindChance">分析</button>
     <button class="calButton" bindtap="bindBack">撤销</button>
     <button class="calButton" bindtap="bindOrigin">复原</button>
+  </view>
+
+  <view class="checkboxView">
+      <checkbox bindtap="checkboxChange" color="#8d1606">两副牌</checkbox>
   </view>
   
 </view>

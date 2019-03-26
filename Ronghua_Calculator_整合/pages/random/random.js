@@ -13,11 +13,15 @@ Page({
   },
 
   bindsubmit: function (e) {
+    this.setData({ randomNum: "" });
     if (!change) {
       var min = Number(e.detail.value.minValue), 
         max = Number(e.detail.value.maxValue);
-      if (max <= min) {
-        this.setData({ randomNum: "最大值应大于最小值，\n请重新输入" });
+      if (e.detail.value.minValue == "" || e.detail.value.maxValue == "") {
+        this.setData({ randomNum: "_(:△」∠)_" });
+      }
+      else if (max <= min) {
+        this.setData({ randomNum: "最大值应大于最小值" });
       }
       else {
         this.setData({ randomNum: getRandomNum(min, max) });
@@ -44,6 +48,7 @@ Page({
   },
 
   checkboxChange: function() {
+    this.setData({ randomNum: "" });
     change = !change;
     if (change) {
       this.setData({

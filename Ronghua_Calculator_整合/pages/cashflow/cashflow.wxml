@@ -1,6 +1,10 @@
 <!--pages/cashflow/cashflow.wxml-->
 <view class='container'>
   <image class='picture_cf' src='/pic/cashflow.png'></image>
-  <navigator url='/pages/annuity/annuity' hover-class='nav-hover' class='nav-default'>等额现金流计算</navigator>
-  <navigator url='/pages/discount/discount' hover-class='nav-hover' class='nav-default'>非等额现金流计算</navigator>
+  <view class='navi'>
+    <navigator url='/pages/annuity/annuity' hover-class='nav-hover' class='nav-default'>等额现金流计算</navigator>
+  </view>
+  <view class='navi'>
+     <navigator url='/pages/discount/discount' hover-class='nav-hover' class='nav-default'>非等额现金流计算</navigator>
+  </view>
 </view>

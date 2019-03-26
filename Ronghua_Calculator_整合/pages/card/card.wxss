@@ -42,10 +42,18 @@
 .calButton {
   width: 150rpx;
   height: 70rpx;
-  margin: 20rpx 10rpx;
+  margin: 20rpx 10rpx 10rpx 10rpx;
   background-color: #8d1606;
   color: white;
   line-height: 70rpx;
+}
+
+.checkboxView {
+  margin: 0rpx auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 590;
 }
 
 /* 分析 */
@@ -67,20 +75,20 @@
 }
 
 .chanceTextType {
-  width: 70rpx;
+  width: 90rpx;
   height: 60rpx;
-  margin: 0 5rpx 10rpx 65rpx;
+  margin: 0 15rpx 10rpx 75rpx;
   font-size: 0.8rem;
   text-align: left;
   line-height: 43rpx;
-  
 }
 
 .chanceText {
-  width: 280rpx;
+  width: 470rpx;
   height: 60rpx;
-  margin: 0 25rpx 5rpx 5rpx;
-  padding-bottom: 5rpx;
-  font-size: 0.7rem;
+  margin: 0 25rpx 10rpx 5rpx;
+  font-size: 0.8rem;
   border-bottom: 1px solid #f1f1f1;
+  text-align: center;
 }
+

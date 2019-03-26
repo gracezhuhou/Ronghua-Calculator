@@ -329,6 +329,42 @@ Page({
     }
   },
 
+  checkboxChange: function () {
+    if (cardNum == 4) cardNum = 8;
+    else cardNum = 4;
+
+    var array1 = this.data.cardArray1, array2 = this.data.cardArray2,
+      array1_my = this.data.cardArray1_my, array2_my = this.data.cardArray2_my;
+    for (var i = 0; i < 7; ++i) {
+      array1[i].num = cardNum;
+      array1_my[i].num = 0;
+    }
+    for (var i = 0; i < 6; ++i) {
+      array2[i].num = cardNum;
+      array2_my[i].num = 0;
+    }
+    this.setData({
+      cardArray1: array1,
+      cardArray2: array2,
+      cardArray1_my: array1_my,
+      cardArray2_my: array2_my,
+      jkNum: cardNum / 2,
+      jkNum_my: 0,
+      chance_double: "",
+      chance_double_my: "",
+      chance_triple: "",
+      chance_triple_my: "",
+      chance_bomb: "",
+      chance_bomb_my: "",
+      chance_straight: "",
+      chance_straight_my: "",
+      sum: 13 * cardNum + cardNum / 2,
+      sum_my: 0
+    });
+    backArray = new Array();
+    backArrayIndex = 0;
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
